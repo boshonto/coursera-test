@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
+body {
+    background-image: url('https://undsgn.com/wp-content/uploads/2018/04/ltotbngnzzu.jpg');
+    
+}
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+header {
+    padding: 2%;
+    text-align: center;
+}
+.title {
+    color: white;
+    font-size: 1.5rem;
+    margin: 1.5%;
+}
+.sub-heading {
+    color: white;
+    margin-bottom: 1%;
+    font-weight: 400;
+}
+main {
+    background: rgba(15, 15, 15, 0.65);
+    border-radius: 0.5%;
+    color: white;
+}
+.block {
+    margin: 0.5% 1.5%;
+    padding: 0.5% 1%;
+}
+.form-label {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.form-label:nth-child(1){
+    margin-top: 15px;
+}
+input[type='text'],
+input[type='email'],
+input[type='number'],
+textarea,
+select {
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+}
+input[type='radio'],
+input[type='checkbox'] {
+    margin-right: 7px;
+    transform: scale(1.5);
+}
+.checkbox-radio {
+    padding: 5px 0;
+}
+.checkbox-text-small {
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+input[type='submit'] {
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    background: #333;
+    margin-bottom: 10px;
+}
+footer p{
+    color: white;
+    text-align: right;
+    font-size: 0.8rem;
+    font-weight: 450;
+}
