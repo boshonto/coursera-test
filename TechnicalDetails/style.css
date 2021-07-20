@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+/* ====================== HEADER =================== */
+
+header {
+    max-width: 25vw;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    border-right: 1px solid #333;
+    position: fixed;
+    z-index: 999;
+}
+header h1 {
+    padding-top: 7%;
+    padding-left: 6%;
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+header nav {
+    overflow-y: scroll;
+    height: 90vh;
+}
+header nav ul{
+    list-style-type: none;
+}
+header nav ul li {
+    padding: 3% 4%;
+}
+header nav ul li::before{
+    display: inline-block;
+    content: "";
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+header nav ul li:nth-last-child(1){
+    padding-bottom: 7%;
+}
+header nav ul li a{
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+header nav ul li a:hover {
+    color: #000;
+    transition: 0.35s ease;
+}
+
+/* ====================== MAIN =================== */
+
+main {
+    width: 68vw;
+    position: absolute;
+    left: 28vw;
+    top: 0;
+    text-align: justify;
+}
+.block-title {
+    padding: 3% 1%;
+    font-weight: 600;
+}
+.text,
+ul,
+code {
+    margin: 0 3%;
+    color: #333;
+}
+.text {
+    padding-bottom: 1.5%;
+}
+ul {
+    margin-left: 8%; 
+}
+ul li {
+    padding-bottom: 1.5%;
+}
+code {
+    background: #eee;
+    display: block;
+    font-family: monospace;
+    padding: 2%;
+    margin-bottom: 1.5%;
+}
+
+/* ====================== MEDIA QUERIES =================== */
+
+@media screen and (max-width: 940px) {
+    header {
+        position: relative;
+        top: 0;
+        max-width: 100vw;
+        height: 35vh;
+    }
+    header h1 {
+        padding-top: 2%;
+        text-align: center;
+    }
+    header nav {
+        height: 27vh;
+    }
+    header nav ul li {
+        padding: 1% 2%;
+    }
+    main {
+        width: 95vw;
+        position: absolute;
+        left: 1%;
+        top: 37vh;
+        text-align: justify;
+    }
+}
