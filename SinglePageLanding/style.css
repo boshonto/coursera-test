@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --white: #f7f8f3;
+    --yellow: #e6df44;
+    --orange: #ffaf37;
+    --blue: #011a27;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, serif;
+}
+body {
+    background: radial-gradient(#0a415f, var(--blue));
+    color: var(--white);
+}
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/*===================== HEADER =================*/
+
+header,
+nav ul,
+.side-nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+.logo {
+    padding: 1.5% 0% 2% 5%;
+}
+.title {
+    position: absolute;
+    left: -10000px;
+    overflow: hidden;
+}
+.logo img{
+    cursor: pointer;
+    max-width: 64px;
+}
+.menu ul li,
+.side-nav ul li {
+    margin: 0 1rem;
+    padding: 7% 1rem;
+}
+.menu ul .active{
+    background-color: var(--orange);
+    border-radius: 0 0 15px 15px;
+}
+.menu ul li .active {
+    color: var(--blue);
+}
+.menu ul li .active:hover {
+    color: var(--blue);
+}
+.menu ul li a{
+    font-weight: 600;  
+}
+.menu ul li a:hover,
+.side-nav ul li a:hover,
+footer ul li a:hover{
+    color: var(--orange);
+    transition: all 0.4s ease-in-out;
+}
+.menu-bar{
+    display: none;
+}
+
+/*===================== MAIN =================*/
+
+main {
+    max-width: 1200px;
+    margin: 2% auto 2% auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .description {
+    padding-left: 7%;
+}
+main .watch-title {
+    font-size: 4.5rem;
+    padding-bottom: 3%;
+}
+main .watch-description {
+    font-size: 1.2rem;
+    padding-bottom: 4%;
+}
+.watch-speciality ul {
+    list-style-type: disc;
+    padding-bottom: 5%;
+}
+.watch-speciality ul li {
+    display: inline-block;
+    color: var(--orange);
+    padding-right: 10%;
+}
+main .price-tag {
+    font-size: 3rem;
+    padding-bottom: 7%;
+}
+main .watch-button button {
+    cursor: pointer;
+    padding: 4% 7%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--orange);
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.4s linear;
+}
+main .watch-button button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+main .watch-button button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+main .watch-button button:hover span {
+    padding-right: 25px;
+}
+  
+main .watch-button button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+main .watch-button button:hover {
+    background-color: #f79400;
+}
+main .image {
+    padding: 2% 5% 3% 15%;
+}
+
+/*===================== FOOTER =================*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+footer ul {
+    list-style-type: none;
+}
+footer ul li {
+    display: inline-block;
+}
+footer .social ul li,
+footer .contact-us ul li{
+    padding: 0 1rem;
+}
+footer .contact-us ul li a{
+    font-size: 0.9rem;
+}
+
+/*===================== MEDIA QUERIES =================*/
+
+@media screen and (max-width: 1200px) {
+    main .image {
+        padding-left: 10%;
+    }
+    main .watch-title {
+        font-size: 3.7rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    main {
+        margin-bottom: 4%;
+    }
+    main .watch-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    main {
+        margin-bottom: 6%;
+    }
+    main .image {
+        padding-left: 5%;
+    }
+    main .watch-title {
+        font-size: 2.7rem;
+    }
+    main .price-tag {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header nav {
+        display: none;
+    }
+    main {
+        margin-top: 5%;
+        margin-bottom: 10%; 
+    }
+    .menu-bar {
+        z-index: 999;
+        display: initial;
+    }
+    .active-mobile-menu {
+        z-index: 1;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 12%;
+        background-color: var(--orange);
+    }
+    .active-mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .active-mobile-menu ul li {
+        text-align: center;
+        width: 100%;
+        padding: 4% 0;
+        margin: 0;
+        transition: 0.35s linear;
+    }
+    .active-mobile-menu ul li a{
+        font-weight: 600;
+    }
+    .active-mobile-menu ul li:hover{
+        background-color: var(--blue);
+    }
+    main .watch-description {
+        font-size: 1rem;
+    }
+    main .image {
+        padding-right: 0;
+    }
+    main img {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    main .image {
+        padding-left: 2%;
+    }
+    main img {
+        width: 300px;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer ul {
+        padding: 3% 0;
+    }
+}
+
+@media screen and (max-width:580px) {
+    main{
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width:340px) {
+    .side-nav ul li {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    }
+    main .watch-title {
+        font-size: 2rem;
+    } 
+    main .watch-description{
+        font-size: 0.9rem;
+    }
+    main img{ 
+        width: 250px;
+    }
+    footer {
+        padding-right: 3%;
+        padding-left: 3%; 
+    }
+}

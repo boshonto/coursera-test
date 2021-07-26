@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Watch, Your Time - Watch</title>
+    <link rel="shortcut icon" href="watch-icon-13164.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+
+            <h1 class="title">Watch Dogs</h1>
+
+            <img src="logo.png" alt="Watch Logo" title="Watch Logo">
+
+        </div>
+        
+        <nav id="menu-mobile" class="menu">
+            <ul>
+                <li class="active"><a href="#watch" class="active">Watch</a></li>
+                <li><a href="#smartphone">Smart Phone</a></li>
+                <li><a href="#tv">TV App</a></li>
+                <li><a href="#laptop">Laptop</a></li>
+            </ul>
+        </nav>
+
+        <div class="side-nav">
+            <ul>
+                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <li class="menu-bar" onclick="myFunction()"><i class="fas fa-bars"></i></li>
+            </ul>
+        </div>
+        
+    </header>
+
+    <main>
+
+        <div class="description">
+
+            <h2 class="watch-title">Smart Watch</h2>
+
+            <p class="watch-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet aperiam pariatur cum laborum cupiditate sequi dicta. Ratione nulla neque commodi.</p>
+
+            <div class="watch-speciality">
+                <ul type="disc">
+                    <li>Touch Screen</li>
+                    <li>Bluetoth</li>
+                    <li>4G</li>
+                    <li>Camera</li>
+                </ul>
+            </div>
+
+            <p class="price-tag">$249</p>
+
+            <form class="watch-button">
+
+                <button><span>Buy Now </span></button>
+
+            </form>
+
+        </div>
+
+        <div class="image">
+            <img src="main_photo.png" alt="Photo of the Watch">
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="social">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="contact-us">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+    <script>
+        function myFunction(){
+            var menu = document.getElementById("menu-mobile");
+            menu.classList.toggle("active-mobile-menu");
+            menu.classList.remove("menu")
+            console.log("Yes");
+        }
+    </script>
+
+</body>
+</html>
