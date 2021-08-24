@@ -1,5 +1,5 @@
 //All variables
-var apiKey = '690ZGbvZBIprUcYplmcMJ61vAVyZ0hZQ';
+var apiKey = '6E4IqUsISSCtSpRe8eSzR9GRLN6VfEtS';
 const searchForm = document.querySelector('.search');
 const searchFormInput = document.querySelector('.search input');
 const weatherClass = document.querySelector('.weather');
