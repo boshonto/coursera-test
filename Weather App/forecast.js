@@ -25,7 +25,7 @@ searchForm.addEventListener('submit', e => {
         try 
         {
             //getting city name and parsing data
-            const response = await fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${city}`);
+            const response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${city}`);
             const data = await response.json();
 
             //replacing city name, country name
@@ -36,7 +36,7 @@ searchForm.addEventListener('submit', e => {
             var cityKey = data[0].Key;
 
             //creating API call for forecast
-            const forecastDataRequest = await fetch(`http://dataservice.accuweather.com/currentconditions/v1/${cityKey}?apikey=${apiKey}`);
+            const forecastDataRequest = await fetch(`https://dataservice.accuweather.com/currentconditions/v1/${cityKey}?apikey=${apiKey}`);
             
             //getting data for city forecast
             const forecastData = await forecastDataRequest.json();
