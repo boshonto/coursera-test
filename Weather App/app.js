@@ -55,6 +55,8 @@ let city = localStorage.getItem('cityName');
 // Adding Local Storage city name
 if (city != null) {
 
+    weatherClass.classList.remove('hidden');
+
     updateCity(city)
         .then(data => updateUI(data.cityDetails , data.weatherDetails) )
         .catch(err => console.log(err));
@@ -71,6 +73,8 @@ searchForm.addEventListener('submit', e => {
 
     //Resetting Form
     searchForm.reset();
+
+    weatherClass.classList.remove('hidden');
 
     updateCity(city)
         .then(data => updateUI(data.cityDetails , data.weatherDetails))
