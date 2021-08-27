@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pros&display=swap');
 
 :root{
-    --bg-color: #fffd82;
     --button-color: #1b998b;
     --text-color: #2d3047;
 }
@@ -18,7 +17,8 @@ body{
     width: 100%;
     margin: 2% auto;
     text-align: center;
-    background-color: var(--bg-color);
+    background-color: #eeeeee;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     padding: 3%;
 }
 header h2 {
@@ -33,13 +33,13 @@ main {
 input {
     width: 100%;
     padding: 2%;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    border: none;
+    background-color: #fff;
+    color: var(--text-color);
+    border: 2px solid #aaa;
     border-radius: 5px;
 }
 input::placeholder {
-    color: var(--bg-color);
+    color: var(--text-color);
 }
 .search,
 .add-new {
@@ -49,16 +49,15 @@ input::placeholder {
     position: relative;
     text-align: left;
     background-color: var(--text-color);
-    color: var(--bg-color);
-    margin: 2% 0;
+    color: #fff;
+    margin: 1% 0;
     padding: 3% 4%;
     border-radius: 5px;
 }
-.todo:hover,
 input:focus {
-    background-color: #1a1d35;
     transition: 0.25s linear all;
     outline: none;
+    border: 2px solid var(--text-color);
 }
 .text {
     width: 90%;
@@ -79,12 +78,15 @@ input:focus {
     cursor: pointer;
     margin: 3% 0;
     padding: 1.25%;
-    background-color: var(--button-color);
-    color: var(--bg-color);
+    background-color: var(--text-color);
+    color: #fff;
     border: none;
     border-radius: 5px;
 }
 .add:hover{
-    background-color: #33857b;
-    transition: 0.25s linear all;
+    background-color: #090f3d;
+    transition: background 0.25s linear;
+}
+.filtered {
+    display: none;
 }

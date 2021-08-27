@@ -6,103 +6,7 @@
     <title>ToDo List</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pros&display=swap');
-
-        :root{
-            --bg-color: #fffd82;
-            --button-color: #1b998b;
-            --text-color: #2d3047;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 1.2rem;
-        }
-        body{
-            max-width: 550px;
-            width: 100%;
-            margin: 2% auto;
-            text-align: center;
-            background-color: var(--bg-color);
-            padding: 3%;
-        }
-        header h2 {
-            font-size: 3.25rem;
-            padding: 3%;
-            font-family: 'Dancing Script', arial;
-            color: var(--text-color);
-        }
-        main {
-            padding: 1% 0;
-        }
-        input {
-            width: 100%;
-            padding: 2%;
-            background-color: var(--text-color);
-            color: var(--bg-color);
-            border: 3px solid var(--button-color);
-            border-radius: 5px;
-        }
-        input::placeholder {
-            color: var(--bg-color);
-        }
-        .search,
-        .add-new {
-            padding: 5% 0;
-        }
-        .todo {
-            position: relative;
-            text-align: left;
-            background-color: var(--text-color);
-            color: var(--bg-color);
-            margin: 1% 0;
-            padding: 3% 4%;
-            border-radius: 5px;
-        }
-        .todo:hover,
-        input:focus {
-            background-color: #1a1d35;
-            transition: 0.25s linear all;
-            outline: none;
-        }
-        .text {
-            width: 90%;
-        }
-        .far {
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 1.5rem;
-            padding: 3%;
-        }
-        .far:hover{
-            cursor: pointer;
-            color: red;
-            transition: 0.25s linear all;
-        }
-        .button .add {
-            cursor: pointer;
-            margin: 3% 0;
-            padding: 1.25%;
-            background-color: var(--button-color);
-            color: var(--bg-color);
-            border: none;
-            border-radius: 5px;
-        }
-        .add:hover{
-            background-color: #33857b;
-            transition: 0.25s linear all;
-        }
-        .filtered {
-            display: none;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
@@ -132,50 +36,8 @@
         </div>
 
     </main>
-
-    <script>
-        var main = document.querySelector('main');
-        var todoName = document.querySelector('.todoName');
-        var addButton = document.querySelector('.add');
-        var addButtonForm = document.querySelector('.addButton');
-        var search = document.querySelector('.search input');
-
-        addButton.addEventListener('click', (e) => {
-
-            e.preventDefault();
-
-            var todoContent = todoName.value.trim();
-            if(todoContent){
-                main.querySelector('.todos').innerHTML +=   `<div class = "todo">
-                                            <p class = "text">${todoContent}</p>
-                                            <i class="far fa-trash-alt"></i>
-                                        </div>`;
-                addButtonForm.reset();
-            }
-
-            main.querySelectorAll('.far').forEach((e) => {
-                e.addEventListener(('click'), () => {
-                    e.parentElement.remove();
-                });
-            })
-        });
-
-        const filterTodos = (term) => {
-            Array.from(main.querySelector('.todos').children)
-                .filter((todo) => !todo.textContent.includes(term))
-                .forEach((todo) => todo.classList.add('filtered'));
-            
-            Array.from(main.querySelector('.todos').children)
-                .filter((todo) => todo.textContent.includes(term))
-                .forEach((todo) => todo.classList.remove('filtered'));
-        };
-
-        search.addEventListener('keyup', () => {
-            const word = search.value.trim();
-            filterTodos(word);
-        })
-
-    </script>
+    
+    <script src="app.js"></script>
 
 </body>
 </html>
