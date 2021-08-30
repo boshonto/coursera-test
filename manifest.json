@@ -1,7 +1,7 @@
 {
     "name": "Todo App for Me",
     "short_name": "Todo App",
-    "start_url": "todo/",
+    "start_url": "todo/index.html",
     "scope": "/",
     "icons": [
       {
