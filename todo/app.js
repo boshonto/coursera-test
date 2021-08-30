@@ -7,7 +7,7 @@ var search = document.querySelector('.search input');
 var todoItems = [];
 
 //checking todoItems Array
-if(localStorage != null){
+if(localStorage.getItem('todoItem') != null){
     todoItems = JSON.parse(localStorage.getItem('todoItem'));
 }
 
