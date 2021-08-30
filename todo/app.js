@@ -1,3 +1,8 @@
+if ("serviceWorker" in navigator) {
+    // register service worker
+    navigator.serviceWorker.register("service-worker.js");
+  }
+
 //All Variables
 var main = document.querySelector('main');
 var todoName = document.querySelector('.todoName');
